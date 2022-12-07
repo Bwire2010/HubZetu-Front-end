@@ -23,7 +23,7 @@ handleOnSubmit = (event) => {
     this.props.toggle(); 
 }
 
-render() {
+render(); {
     return (
       <Container className='w-50'>
         <h2 className="header text-center p-3">Add a New Hub</h2>
@@ -51,6 +51,5 @@ render() {
       </Container>
     )
   }
-}
 
 export default connect(null, {addHub})(HubCreateForm);
