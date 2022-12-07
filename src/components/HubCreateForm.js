@@ -4,5 +4,11 @@ import {connect} from 'react-redux';
 import {addHub} from '../actions/addHub.js'
 
 class HubCreateForm extends React.Component {
-    
+    state = {
+        name:"",
+        image:"",
+        location:"", 
+        website_url:"",
+        description:"",
+    } 
 }
