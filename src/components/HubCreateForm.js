@@ -17,3 +17,8 @@ handleOnChange = (event) =>{
         [event.target.name]: event.target.value
     })
 }
+handleOnSubmit = (event) => {
+    event.preventDefault();
+    this.props.addHub(this.state,this.props.history);
+    this.props.toggle(); 
+}
