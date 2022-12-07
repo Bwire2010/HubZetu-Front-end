@@ -1,8 +1,7 @@
 import React from 'react';
 import homeimage from '../Assets/hubs.jpg'
 import '../Css/Home.css'
-import { Nav } from 'react-bootstrap';
-
+import { NavLink } from 'react-router-dom';
 
 const Home =() =>{
     return(
@@ -13,7 +12,7 @@ const Home =() =>{
             <p> Helping Fellow tech members Choose their next hub by offering honest reviews. </p>
                  <div className="btnBox">
                     <div className="btn">
-                        <Nav.Link to ='/Signup' id="signup" className="SendNow"> Join Us </Nav.Link>
+                        <NavLink to ='/signup'  className="SendNow"><strong>Join Us</strong>  </NavLink>
                     </div>
 
                  </div>
