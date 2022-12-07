@@ -10,9 +10,8 @@ const NavBar = () => {
             <Navbar.Toggle aria-controls='responsive-navbar-nav' />
             <Navbar.Collapse id='responsive-navbar-nav'>
               <Nav>
-                <Nav.Link href='/'><strong>Home</strong></Nav.Link>
-                <Nav.Link href=''><strong>All Hubs</strong></Nav.Link>
-                <Nav.Link href=''><strong>Create New Hub</strong></Nav.Link>
+                <Nav.Link href=''><strong>Sign Up</strong></Nav.Link>
+                <Nav.Link href=''><strong>Login</strong></Nav.Link>
               </Nav>
             </Navbar.Collapse>
         </Container>
