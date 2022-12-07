@@ -42,4 +42,4 @@ class ReviewCreateForm extends React.Component {
   }
 }
 
-export default (null, {AddReview})(ReviewCreateForm);
+export default (null, {AddReview})(ReviewCreateForm)

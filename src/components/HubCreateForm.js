@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import HubCreateForm from 'react-bootstrap/Container';
 
-const AddHub = ({ hubs, sethubs}) => {
-  const [HubCreateForm, ] = useState({
+const AddHub = () => {
+  const [ hubs,sethubs] = useState({
+
     name:"",
     image:"",
     location:"", 
@@ -18,7 +20,7 @@ const AddHub = ({ hubs, sethubs}) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    fetch(`https://`, {
+    fetch(``, {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -39,7 +41,7 @@ const AddHub = ({ hubs, sethubs}) => {
     <div className="container">
       <h2 className="mt-5 text-center"><b>Contribute to the Hub</b></h2>
       <p className="mb-2 text-center">
-      If you have an interesting  that you wish to add to the library, <br></br>
+      If you have an interesting hub that you wish to add , <br></br>
        feel free  to fill in the necessary details in the form.
       </p>
       <div className="row d-flex justify-content-center mt-4 mb-3">
@@ -107,5 +109,4 @@ const AddHub = ({ hubs, sethubs}) => {
   );
 };
 
-
-export default (null, {AddHub});
+export default AddHub(HubCreateForm);
