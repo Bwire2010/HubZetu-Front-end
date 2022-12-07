@@ -12,3 +12,8 @@ class HubCreateForm extends React.Component {
         description:"",
     } 
 }
+handleOnChange = (event) =>{
+    this .setState({
+        [event.target.name]: event.target.value
+    })
+}
