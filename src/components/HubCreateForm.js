@@ -1,55 +1,111 @@
-import React from 'react';
-import { Form, Button, Container } from 'react-bootstrap';
-import {connect} from 'react-redux';
-import {addHub} from '../actions/addHub.js'
+import React, { useState } from "react";
 
-class HubCreateForm extends React.Component {
-    state = {
-        name:"",
-        image:"",
-        location:"", 
-        website_url:"",
-        description:"",
-    } 
-}
-handleOnChange = (event) =>{
-    this .setState({
-        [event.target.name]: event.target.value
+const AddHub = ({ hubs, sethubs}) => {
+  const [HubCreateForm, ] = useState({
+    name:"",
+    image:"",
+    location:"", 
+    website_url:"",
+    description:"",
+  });
+
+  const handleChange = (e) => {
+    HubCreateForm({
+      ...HubCreateForm,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    fetch(`https://`, {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(HubCreateForm),
     })
-}
-handleOnSubmit = (event) => {
-    event.preventDefault();
-    this.props.addHub(this.state,this.props.history);
-    this.props.toggle(); 
-}
+      .then((res) => res.json())
+      .then((data) => {
+        const newData = [...hubs, data];
+        sethubs(newData);
+        console.log(newData)
+      });
+    e.target.reset();
+  };
 
-render(); {
-    return (
-      <Container className='w-50'>
-        <h2 className="header text-center p-3">Add a New Hub</h2>
-        <Form onSubmit={this.handleOnSubmit} className="mx-auto">
-          <Form.Group className="mb-3" controlId="name">
-            <Form.Label>Hub Name</Form.Label>
-            <Form.Control type="text" name="name" value={this.state.title} onChange={this.handleOnChange} placeholder="name"  required/>
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="founder">
-            <Form.Label>Founder Name</Form.Label>
-            <Form.Control type="text" name="founder" value={this.state.author} onChange={this.handleOnChange} placeholder="founder"  required/>
-          </Form.Group>
-          <Form.Group controlId="description">
-            <Form.Label>Description</Form.Label>
-            <Form.Control as="textarea" name="description" value={this.state.description} onChange={this.handleOnChange} style={{height: '100px'}}  required/>
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="image_url">
-            <Form.Label>Cover Image URL</Form.Label>
-            <Form.Control type="text" name="image_url" value={this.state.image_url} onChange={this.handleOnChange}  required/>
-          </Form.Group>
-          <div className='d-grid gap-2 col-6 mx-auto'>
-            <Button variant='secondary' type='submit' className='m-auto shadow'>Submit</Button>
+  return (
+    <div className="container">
+      <h2 className="mt-5 text-center"><b>Contribute to the Hub</b></h2>
+      <p className="mb-2 text-center">
+      If you have an interesting  that you wish to add to the library, <br></br>
+       feel free  to fill in the necessary details in the form.
+      </p>
+      <div className="row d-flex justify-content-center mt-4 mb-3">
+          <div className="col-md-4">
+            <form onSubmit={handleSubmit}>
+              <h4 className="text-center">Hubs Details Form</h4>
+              <div className="mb-3">
+                <label>Name</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  name="name"
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="mb-3">
+                <label>Image</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  name="image_url"
+                  placeholder="Enter image url"
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="mb-3">
+                <label>Location</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  name="location"
+                  placeholder="Enter the hub location"
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="mb-3">
+                <label>Founder</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  name="founder"
+                  placeholder="Enter hub founder"
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="mb-3">
+                <label>Description</label>
+                <input
+                  type="number"
+                  className="form-control"
+                  name="rating"
+                  placeholder="Enter the book rating"
+                  onChange={handleChange}
+                />
+              </div>
+              <div>
+                <button type="submit" className="btn btn-info"> 
+                  Submit
+                </button>
+              </div>
+            </form>
           </div>
-        </Form>
-      </Container>
-    )
-  }
+        </div>
+    </div>
+  );
+};
 
-export default connect(null, {addHub})(HubCreateForm);
+
+export default (null, {AddHub});

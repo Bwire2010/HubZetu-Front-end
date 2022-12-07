@@ -1,7 +1,7 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import {addReview} from '../actions/addReview.js';
-import {Form, Button, Container} from 'react-bootstrap';
+import { Form, Button} from "react-bootstrap";
+import {Container } from "react-bootstrap";
+import AddReview from 'react-bootstrap/Container'
 
 class ReviewCreateForm extends React.Component {
   state = {
@@ -42,4 +42,4 @@ class ReviewCreateForm extends React.Component {
   }
 }
 
-export default connect(null, {addReview})(ReviewCreateForm);
+export default (null, {AddReview})(ReviewCreateForm);
