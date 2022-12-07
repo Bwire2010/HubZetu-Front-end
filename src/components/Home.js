@@ -13,6 +13,7 @@ const Home =() =>{
                  <div className="btnBox">
                     <div className="btn">
                         <Nav.Link to ='/login' className="SendNow"> Join Us </Nav.Link>
+                      
                     </div>
 
                  </div>
