@@ -5,6 +5,9 @@ export const deleteHub = (hubid, history) =>{
         })
         .then(response => response .json())
         .then (hubId => {
-            dispatch 
+            dispatch ({type: 'DELETE_HUB', payload: hubId})
+            history.push('/hubs')
         })
+        .catch(err => alert(err));
+    }
 }
