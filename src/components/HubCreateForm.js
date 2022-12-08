@@ -41,7 +41,7 @@ const AddHub = () => {
     <div className="container">
       <h2 className="mt-5 text-center"><b>Contribute to the Hub</b></h2>
       <p className="mb-2 text-center">
-      If you have an interesting hub that you wish to add , <br></br>
+      If you have an interesting hub that you wish to add, <br></br>
        feel free  to fill in the necessary details in the form.
       </p>
       <div className="row d-flex justify-content-center mt-4 mb-3">
