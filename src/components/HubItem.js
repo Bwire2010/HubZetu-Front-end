@@ -1,36 +1,28 @@
 import {NavLink} from "react-router-dom"
 
-function HubItem({ hub, onDeleteHub }) {
-  const { id, name, image,location,founder } = hub;
+function HubItem({ hub }) {
+  const { name, image,location,founder } = hub;
 
 
 
-  function handleDeleteHub() {
-    fetch(`/logout/${id}`, {
-      method: "DELETE",
-    }).then((r) => {
-      if (r.ok) {
-        onDeleteHub(hub);
-      }
-    });
-  }
 
 
   return (
 
     <NavLink to={`/hubs/${hub.id} `}>
 
-    <div className="spice-item card">
+<div class='container-poster'>
+  <div class='poster'>
+    <div class='poster-img'>
       <img src={image} alt={name} />
+      </div>
       <div className="details">
         <h2>{name}</h2>
         <p>Location: {location}</p>
         <p> Founder: {founder}</p>
+        </div>
         
-      
-        <p>
-          <button onClick={handleDeleteHub}>Delete Hub</button>
-        </p>
+    
       </div>
     </div>
     </NavLink>

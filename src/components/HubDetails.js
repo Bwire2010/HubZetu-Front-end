@@ -1,13 +1,17 @@
 import React from 'react'
 import { useParams } from "react-router";
 import{useState , useEffect} from "react"
+import Reviews from './Reviews';
 
 
-function HubDetails() {
+
+
+function HubDetails(hub, onDeleteHub) {
+    
 
     const {id} = useParams ()
     const [hubs, setHubs ] = useState([])
-    console.log(hubs + "here")
+    
     useEffect(()=>{
      const getHubs = async () => {
      const response = await fetch(`/hubs/${id}`);
@@ -16,6 +20,16 @@ function HubDetails() {
      getHubs();
 
    })
+
+    function handleDeleteHub() {
+    fetch(`/logout/${id}`, {
+      method: "DELETE",
+     }).then((r) => {
+      if (r.ok) {
+        onDeleteHub(hub);
+      }
+       });
+      }
 
   return (
     <>
@@ -28,6 +42,10 @@ function HubDetails() {
      <p>
       Link: <em>{hubs.website_url}</em>
     </p> 
+  
+    <button>Add Review</button>
+    <button onClick={handleDeleteHub}> Delete Hub </button>
+     <Reviews/>
     </>
   )
 }

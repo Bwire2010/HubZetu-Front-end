@@ -124,24 +124,9 @@ main {
   margin: 0.75rem 0;
 }
 
-.star-rating {
-  color: rgba(0, 0, 0, 0.1);
-  font-size: 1.5rem;
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
 
-.star-rating .foreground {
-  color: var(--theme-primary);
-  position: absolute;
-  display: flex;
-  overflow: hidden;
-}
 
-.star-rating .background {
-  display: flex;
-}
+
 
 form {
   display: flex;
@@ -155,4 +140,20 @@ form textarea {
 
 form button[type="submit"] {
   width: 150px;
+}
+
+.container-poster {
+  display: flex;
+  justify-content: space-between;
+}
+
+.poster {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: calc(100%/4.1); /* .1 for spacing */
+}
+
+img {
+  max-width: 100%;
 }
