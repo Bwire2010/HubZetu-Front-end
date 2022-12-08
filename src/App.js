@@ -1,9 +1,8 @@
-import './App.css';
+// import "../index.css"
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import HubItem from './components/HubItem';
-
 import {Routes,Route } from "react-router-dom";
 import HubForm from './components/HubForm';
 import { useState, useEffect } from "react";

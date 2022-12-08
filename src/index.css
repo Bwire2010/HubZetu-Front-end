@@ -43,6 +43,7 @@ h4 {
 
 .card {
   margin: 2rem 0;
+  width: 300px;
   padding: 1rem;
   background-color: white;
   border-radius: 1rem;
@@ -82,26 +83,31 @@ main {
   margin: 0 auto;
 }
 
-.spice-item {
+
+.hub-item {
   display: flex;
   align-items: flex-start;
+
+
+ 
 }
 
-.spice-item img {
-  max-width: 400px;
+.hub-item img {
+  max-width: 250px;
   object-fit: contain;
+
 }
 
-.spice-item .details {
+.hub-item .details {
   margin-left: 1rem;
   position: relative;
 }
 
-.spice-item .details h2 {
+.hub-item .details h2 {
   margin-top: 0;
 }
 
-.spice-item .favorite {
+.hub-item .favorite {
   position: absolute;
   font-size: 2rem;
   bottom: 0;
@@ -111,16 +117,16 @@ main {
   cursor: pointer;
 }
 
-.spice-item .favorite:focus {
+.hub-item .favorite:focus {
   outline: none;
 }
 
-.spice-item .favorite span {
+.hub-item .favorite span {
   color: transparent;
   text-shadow: 0 0 0 var(--theme-primary);
 }
 
-.spice-item .details p {
+.hub-item .details p {
   margin: 0.75rem 0;
 }
 
@@ -142,18 +148,3 @@ form button[type="submit"] {
   width: 150px;
 }
 
-.container-poster {
-  display: flex;
-  justify-content: space-between;
-}
-
-.poster {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  width: calc(100%/4.1); /* .1 for spacing */
-}
-
-img {
-  max-width: 100%;
-}

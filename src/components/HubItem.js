@@ -11,19 +11,15 @@ function HubItem({ hub }) {
 
     <NavLink to={`/hubs/${hub.id} `}>
 
-<div class='container-poster'>
-  <div class='poster'>
-    <div class='poster-img'>
+<div class="hub-item card">
       <img src={image} alt={name} />
-      </div>
       <div className="details">
         <h2>{name}</h2>
         <p>Location: {location}</p>
         <p> Founder: {founder}</p>
         </div>
-        
     
-      </div>
+      
     </div>
     </NavLink>
   );
