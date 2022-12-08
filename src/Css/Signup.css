@@ -83,11 +83,11 @@ input:not(:placeholder-shown){
     padding-top: 14px;
     padding-bottom: -2px;
 }
-.signup-btn{
+/*.signup-btn{
     text-align: center;
     width: 10%;
     padding: 0.5rem;
-    /* border: 1px solid transparent; */
+     border: 1px solid transparent; /
     background-color: #D3D3D3; 
     color: #fff;
     font-weight: 600;
@@ -96,3 +96,4 @@ input:not(:placeholder-shown){
     border: 2px solid transparent;
     border-radius: 5px;
 }
+ */
