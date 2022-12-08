@@ -5,7 +5,7 @@ import Home from './components/Home';
 import HubCreateForm from './components/HubCreateForm';
 import ReviewCreateForm from './components/ReviewCreateForm';
 
-function App() {
+function Ap() {
   return (
     <div className="App">
       <NavBar/>
@@ -17,4 +17,4 @@ function App() {
   );
 }
 
-export default App;
+export default Ap;
