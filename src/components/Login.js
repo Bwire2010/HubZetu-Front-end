@@ -5,12 +5,10 @@ import "../Css/Login.css"
 function Login (onLogin) {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
-  const [errors, setErrors] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+  
 
       function handleSubmit(e) {
           e.preventDefault();
-          setIsLoading(true);
             fetch("/login", {
             method: "POST",
             headers: {
@@ -18,15 +16,9 @@ function Login (onLogin) {
             },
             body: JSON.stringify({ name }),
            })
-           .then((r) => {
-            setIsLoading(false);
-            if (r.ok) {
-              r.json().then((user) => onLogin(user));
-            } else {
-              r.json().then((err) => setErrors(err.errors));
-            }
-          });
-        }
+           .then((r) => r.json())
+         .then((user) => onLogin(user));
+     }
 
     return(
         <div className='log-in-container'>
@@ -49,7 +41,7 @@ function Login (onLogin) {
             <div className='line'></div>        
           </div>
           <div className='other'>
-            <a className='forgot-password'>Forgot password</a>
+            <a href='#' className='forgot-password'>Forgot password</a>
          </div>
          </form>
           <div className='boxacc'>

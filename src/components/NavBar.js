@@ -6,7 +6,7 @@ import '../Css/NavBar.css';
 const NavBar = () => {
   return (
     <>
-      <Navbar collapseOnSelect  expand="sm" bg="info" variant="dark" className="py-4 mt-3">
+      <Navbar collapseOnSelect  expand="sm" bg="primary" variant="dark" className="py-4 mt-3">
           <Container className='container'>
             <Navbar.Brand href="/" className="hub"><strong>HubZetu</strong></Navbar.Brand>
             <Navbar.Toggle aria-controls='responsive-navbar-nav' />
