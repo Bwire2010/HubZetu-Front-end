@@ -12,7 +12,7 @@ const Home =() =>{
             <p> Helping Fellow tech members Choose their next hub by offering honest reviews. </p>
                  <div className="btnBox">
                     <div className="btn">
-                        <NavLink to ='/signup'  className="SendNow"><strong>Join Us</strong>  </NavLink>
+                        <NavLink to ='/signup' className="SendNow"> Join Us </NavLink>
                     </div>
 
                  </div>
