@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
 import "../Css/Login.css"
 
 function Login (onLogin) {
@@ -7,18 +6,26 @@ function Login (onLogin) {
   const [password, setPassword] = useState("");
   
 
-      function handleSubmit(e) {
-          e.preventDefault();
-            fetch("/login", {
-            method: "POST",
-            headers: {
-               "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ name }),
-           })
-           .then((r) => r.json())
-         .then((user) => onLogin(user));
-     }
+  function handleSubmit(e) {
+    e.preventDefault();
+    e.target.reset();
+    fetch("/login", {
+      method: "POST",
+      headers: {
+      "Content-Type": "application/json",
+        Application: "application/json"
+      },
+      body: JSON.stringify({
+        name,
+        password,
+     }),
+    })
+    .then((res) => res.json())
+      .then((data) => console.log(data))
+      .catch(console.error);
+  }
+
+
 
     return(
         <div className='log-in-container'>
@@ -34,21 +41,10 @@ function Login (onLogin) {
               placeholder='password'  value={password} onChange={(e) => setPassword(e.target.value)} />
               <label htmlFor="password">Password</label>
           </div>
-          <NavLink to ='/hubs'className='login-button' title='login'>Log in</NavLink>
-          <div className='separator'>
-            <div className='line'></div>
-                    <p>OR</p>
-            <div className='line'></div>        
-          </div>
-          <div className='other'>
-            <a href='#' className='forgot-password'>Forgot password</a>
-         </div>
-         </form>
-          <div className='boxacc'>
-            <p>Don't have an account?
-              <NavLink to ='/signup' className='signup'>Sign Up</NavLink> 
-              </p>
-          </div>  
+          <button id="btn" type="submit" >
+              Log in
+            </button>
+         </form> 
         </div>               
         </div>
     )

@@ -3,7 +3,7 @@ import {Navbar, Nav, Container} from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import '../Css/NavBar.css';
 
-const NavBar = () => {
+const NavBarHome = () => {
   return (
     <>
       <Navbar collapseOnSelect  expand="sm" bg="primary" variant="dark" className="py-4 mt-3">
@@ -23,4 +23,4 @@ const NavBar = () => {
   )
 }
 
-export default NavBar;
+export default NavBarHome;

@@ -1,18 +1,20 @@
 import React, { useState } from "react";
 import "../Css/Signup.css"
-import { NavLink } from 'react-router-dom';
 
-function Signup({ onLogin}) {
+
+function Signup() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
+    e.target.reset();
     fetch("/signup", {
       method: "POST",
       headers: {
       "Content-Type": "application/json",
+        Application: "application/json"
       },
       body: JSON.stringify({
         name,
@@ -20,8 +22,9 @@ function Signup({ onLogin}) {
         password,
      }),
     })
-    .then((r) => r.json())
-    .then();
+    .then((res) => res.json())
+      .then((data) => console.log(data))
+      .catch(console.error);
   }
 
 
@@ -50,10 +53,12 @@ function Signup({ onLogin}) {
             </label>
             <input type="password" id="password"  value={password}   onChange={(e) => setPassword(e.target.value)}/>
           </div>
-          </form>
           <div className='signup-btn'>
-            <NavLink to="/login" className="button-block" >Get Started</NavLink>
+          <button id="btn" type="submit" >
+              Register User
+            </button>
           </div>
+          </form>
          </div>  
          </div>
   )
