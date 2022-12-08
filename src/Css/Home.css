@@ -30,7 +30,7 @@
 .btnBox{
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: left;
     margin-bottom: 2em;
    
 }

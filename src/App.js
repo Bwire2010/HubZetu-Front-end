@@ -1,3 +1,4 @@
+
 // import "../index.css"
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
@@ -7,6 +8,10 @@ import {Routes,Route } from "react-router-dom";
 import HubForm from './components/HubForm';
 import { useState, useEffect } from "react";
 import HubDetails from './components/HubDetails';
+import React from "react";
+import Homepage from "./components/Homepage";
+
+
 
 function App() {
 
@@ -30,7 +35,9 @@ function App() {
   }
 
   return (
+
     <div className="App">
+        <Homepage/>
       <NavBar/>
         <Routes>
         <Route path='/' element={<Home/>} />
@@ -48,6 +55,8 @@ function App() {
         
       <Footer/>
     </div>
+
+
   );
 }
 
