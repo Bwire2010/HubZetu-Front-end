@@ -1,6 +1,6 @@
 import React from 'react';
-import {Navbar, Nav, Container} from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import {Navbar, Container} from 'react-bootstrap';
+
 
 const NavBar = () => {
   return (
@@ -13,11 +13,6 @@ const NavBar = () => {
             <Navbar.Brand href="/"><strong>SignOut</strong></Navbar.Brand>
             <Navbar.Toggle aria-controls='responsive-navbar-nav' />
             <Navbar.Collapse id='responsive-navbar-nav'>
-              <Nav>
-                <NavLink to ='/hubs' className="navitem"><strong>Hubs</strong></NavLink>
-                <NavLink to ='/hubs/new' className="navitem"><strong>Add Hub</strong></NavLink>
-               
-              </Nav>
             </Navbar.Collapse>
         </Container>
       </Navbar>

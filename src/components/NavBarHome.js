@@ -15,6 +15,9 @@ const NavBarHome = () => {
                 <NavLink to ='/' className="navitem"><strong>Home</strong></NavLink>
                 <NavLink to ='/signup' className="navitem"><strong>SignUp</strong></NavLink>
                 <NavLink to='/login' className='navitem'><strong>Login</strong></NavLink>
+                <Navbar.Brand href="/hubs"  className="navitem"><strong>Hubs</strong></Navbar.Brand>
+                <Navbar.Brand href="/hubs/new" className="navitem"><strong>Add Hub</strong></Navbar.Brand>
+                <Navbar.Brand href="/" className="navitem"><strong >SignOut</strong></Navbar.Brand>
               </Nav>
             </Navbar.Collapse>
         </Container>

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import NavBarHome from "./NavBarHome";
-import Footer from './Footer';
 import Home from './Home';
 import Signup from './Signup';
 import { Routes, Route } from "react-router-dom";
@@ -28,7 +27,6 @@ function Homepage() {
         <Route path='/signup' element={<Signup/>} />
         <Route path='/login' element={<Login/>} />
         </Routes>
-      <Footer/>
     </div>
   );
 }

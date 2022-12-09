@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import "../Css/Login.css"
+import "../Css/Login.css";
+
 
 function Login (onLogin) {
   const [name, setName] = useState("");
@@ -41,7 +42,7 @@ function Login (onLogin) {
               placeholder='password'  value={password} onChange={(e) => setPassword(e.target.value)} />
               <label htmlFor="password">Password</label>
           </div>
-          <button id="btn" type="submit" >
+          <button id="btn" type="submit">
               Log in
             </button>
          </form> 

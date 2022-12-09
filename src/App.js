@@ -1,8 +1,6 @@
 
 // import "../index.css"
-import NavBar from './components/NavBar';
 import Footer from './components/Footer';
-import Home from './components/Home';
 import HubItem from './components/HubItem';
 import {Routes,Route } from "react-router-dom";
 import HubForm from './components/HubForm';
@@ -38,9 +36,8 @@ function App() {
 
     <div className="App">
       <Homepage/>
-      <NavBar/>
         <Routes>
-        <Route path='/' element={<Home/>} />
+        
         <Route path='/hubs/:id' element={<HubDetails/>} />
         <Route path='/hubs/new' element={<HubForm onAddHub={handleAddHub} />} />
   
@@ -51,8 +48,7 @@ function App() {
               onDeleteHub={handleDeleteHub}
             />
           ))} />
-        </Routes>
-        
+        </Routes> 
       <Footer/>
     </div>
 
