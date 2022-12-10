@@ -18,7 +18,7 @@ function ReviewForm({ onAddReview }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch(`/hubs/${id}/review/add-review`, {
+    fetch(`/hubs/${id}/review`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
