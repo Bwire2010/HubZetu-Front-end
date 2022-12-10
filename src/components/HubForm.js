@@ -23,6 +23,7 @@ function HubForm({ onAddHub }) {
     fetch("/hubs", {
       method: "POST",
       headers: {
+        Accept: "application/json",
         "Content-Type": "application/json",
       },
       body: JSON.stringify(formData),

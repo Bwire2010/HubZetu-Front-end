@@ -1,12 +1,13 @@
 import { useState } from "react";
+import { useParams } from "react-router";
 
 const initialState = {
   comment: "",
-
 };
 
 function ReviewForm({ onAddReview }) {
   const [formData, setFormData] = useState(initialState);
+  const { id } = useParams();
 
   function handleChange(e) {
     setFormData({
@@ -17,7 +18,7 @@ function ReviewForm({ onAddReview }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("/hubs/:id/reviews", {
+    fetch(`/hubs/${id}/review/add-review`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -25,7 +26,7 @@ function ReviewForm({ onAddReview }) {
       body: JSON.stringify(formData),
     })
       .then((r) => r.json())
-      .then((newReview) => {
+      .then((newReview) => {;
         setFormData(initialState);
         onAddReview(newReview);
       });
@@ -35,13 +36,13 @@ function ReviewForm({ onAddReview }) {
     <div className="card">
       <h2>Add a New Review</h2>
       <form onSubmit={handleSubmit}>
-      <label htmlFor="comment">Comment: </label>
+        <label htmlFor="comment">Comment: </label>
         <textarea
           id="comment"
           value={formData.comment}
           onChange={handleChange}
         />
-       
+
         <button type="submit">Submit</button>
       </form>
     </div>

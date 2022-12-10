@@ -2,8 +2,11 @@ import React from 'react';
 import homeimage from '../Assets/hubs.jpg'
 import '../Css/Home.css'
 import { NavLink } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const Home =() =>{
+    const isReviewOpen = useSelector(state => state.review.isReviewOpen)
+    console.log(isReviewOpen)
     return(
         <> 
        <div className="mainsection">

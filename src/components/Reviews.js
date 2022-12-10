@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 function Review({  onDeleteReview }) {
   const [review, setReview] = useState([]);
+  
 
   useEffect(() => {
     fetch("/reviews")

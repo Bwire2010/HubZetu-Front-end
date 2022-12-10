@@ -1,15 +1,16 @@
-import {NavLink} from "react-router-dom"
+import {NavLink} from "react-router-dom";
+
+
 
 function HubItem({ hub }) {
   const { name, image,location,founder } = hub;
 
 
-
-
-
   return (
 
+
     <NavLink to={`/hubs/${hub.id} `}>
+
 
 <div class="hub-item card">
       <img src={image} alt={name} />
@@ -19,9 +20,10 @@ function HubItem({ hub }) {
         <p> Founder: {founder}</p>
         </div>
     
-      
     </div>
+
     </NavLink>
+    
   );
 }
 
