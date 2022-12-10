@@ -20,11 +20,11 @@ const NavBarHome = () => {
             <Navbar.Collapse id='responsive-navbar-nav'>
               <Nav>
                 <NavLink to ='/' className="navitem">Home</NavLink>
-                <NavLink to ='/signup' className="navitem">SignUp</NavLink>
                 <NavLink to='/login' className='navitem'>Login</NavLink>
                 <NavLink to="/hubs"  className="navitem">Hubs</NavLink>
-                <NavLink to="/hubs/new" className="navitem">Add Hub </NavLink>
-                { isAuthenticated && <button onClick={signOut} className="navitem">Sign out</button>}
+                <NavLink to="/hubs/new" className="navitem">AddHub </NavLink>
+                { isAuthenticated && <button onClick={signOut} className="navitem3">Signout</button>}
+                <NavLink to ='/signup' className="navitem2">SignUp</NavLink>
               </Nav>
             </Navbar.Collapse>
         </Container>
