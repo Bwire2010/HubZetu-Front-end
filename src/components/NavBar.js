@@ -1,7 +1,6 @@
 import React from 'react';
 import {Navbar, Container} from 'react-bootstrap';
 
-
 const NavBar = () => {
   return (
     <>
@@ -27,4 +26,4 @@ const NavBar = () => {
 
 
 
-export default NavBar;
+export default NavBar; 

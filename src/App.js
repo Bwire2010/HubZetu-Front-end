@@ -8,6 +8,8 @@ import HubDetails from "./components/HubDetails";
 import React from "react";
 import Homepage from "./components/Homepage";
 import ProtectedRoute from "./components/ProtectedRoute";
+import "../src/Css/App.css"
+
 
 function App() {
   const [hubs, setHubs] = useState([]);
@@ -37,7 +39,7 @@ function App() {
           />
         </Route>
         <Route path="/hubs/:id" element={<HubDetails />} />
-        <Route
+        <Route 
           path="/hubs"
           element={hubs.map((hub) => (
             <HubItem key={hub.id} hub={hub} onDeleteHub={handleDeleteHub} />

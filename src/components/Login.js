@@ -3,6 +3,7 @@ import "../Css/Login.css";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setAuthentication } from '../store/slices/authSlice'
+import { NavLink } from 'react-router-dom';
 
 function Login(onLogin) {
   const navigate = useNavigate();
@@ -66,6 +67,11 @@ function Login(onLogin) {
             Log in
           </button>
         </form>
+        <div className='boxacc'>
+            <p>Don't have an account?
+              <NavLink to ='/signup' className='signup'>Register</NavLink> 
+              </p>
+          </div> 
       </div>
     </div>
   );
