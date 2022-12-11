@@ -7,22 +7,18 @@ function HubItem({ hub }) {
 
 
   return (
+ <NavLink to={`/hubs/${hub.id} `}>
 
-
-    <NavLink to={`/hubs/${hub.id} `}>
-
-
-<div class="hub-item card">
+    <div class="hub-item card">
       <img src={image} alt={name} />
       <div className="details">
-        <h2>{name}</h2>
-        <p>Location: {location}</p>
-        <p> Founder: {founder}</p>
+          <h2>{name}</h2>
+         <p>Location: {location}</p>
+         <p> Founder: {founder}</p>
         </div>
-    
     </div>
 
-    </NavLink>
+   </NavLink>
     
   );
 }

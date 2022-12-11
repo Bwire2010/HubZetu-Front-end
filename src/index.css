@@ -1,14 +1,14 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 /* css variables for theming */
@@ -83,19 +83,16 @@ main {
   margin: 0 auto;
 }
 
-
 .hub-item {
   display: flex;
   align-items: flex-start;
+  margin: 10px 10px;
 
-
- 
 }
 
 .hub-item img {
   max-width: 250px;
   object-fit: contain;
-
 }
 
 .hub-item .details {
@@ -132,10 +129,8 @@ main {
 
 .hubs {
   display: flex;
-  flex-wrap: wrap
+  flex-wrap: wrap;
 }
-
-
 
 form {
   display: flex;
@@ -150,4 +145,3 @@ form textarea {
 form button[type="submit"] {
   width: 150px;
 }
-

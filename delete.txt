@@ -1,3 +1,25 @@
 POST : /hubs/:id/review
 
 POST : /hubs/:id/review
+
+<div className="App">
+      <Homepage />
+      <Routes>
+        <Route element={<ProtectedRoute />}>
+          <Route
+            path="/hubs/new"
+            element={<HubForm onAddHub={handleAddHub} />}
+          />
+        </Route>
+        <Route path="/hubs/:id" element={<HubDetails />} />
+        <Route path="/hubs2" element={<Hubs />}/>
+      
+        <Route 
+          path="/hubs"
+          element={ hubs.map((hub) => (
+            <HubItem key={hub.id} hub={hub} onDeleteHub={handleDeleteHub} />
+            ))}
+        />
+      </Routes>
+      <Footer />
+    </div>

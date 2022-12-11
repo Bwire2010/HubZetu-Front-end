@@ -11,6 +11,7 @@ const NavBarHome = () => {
   const signOut = () => {
     dispatch(setAuthentication())
   }
+  
   return (
     <>
       <Navbar collapseOnSelect  expand="sm" bg="primary" variant="dark" className="py-4 mt-3" id="navbar">
@@ -23,8 +24,8 @@ const NavBarHome = () => {
                 <NavLink to='/login' className='navitem'>Login</NavLink>
                 <NavLink to="/hubs"  className="navitem">Hubs</NavLink>
                 <NavLink to="/hubs/new" className="navitem">AddHub </NavLink>
-                { isAuthenticated && <button onClick={signOut} className="navitem3">Signout</button>}
-                <NavLink to ='/signup' className="navitem2">SignUp</NavLink>
+                { isAuthenticated && <button onClick={signOut} className="navitem3">logout</button>}
+                  <NavLink to ='/signup' className="navitem2">SignUp</NavLink>
               </Nav>
             </Navbar.Collapse>
         </Container>

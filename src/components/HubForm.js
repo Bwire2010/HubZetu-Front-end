@@ -40,6 +40,7 @@ function HubForm({ onAddHub }) {
     <div className="card">
       <h2>New Hub</h2>
       <form onSubmit={handleSubmit}>
+
         <label htmlFor="name">Name: </label>
         <input
           type="text"
@@ -47,6 +48,7 @@ function HubForm({ onAddHub }) {
           value={formData.name}
           onChange={handleChange}
         />
+
         <label htmlFor="image">Image URL: </label>
         <input
           type="text"
@@ -54,6 +56,7 @@ function HubForm({ onAddHub }) {
           value={formData.image}
           onChange={handleChange}
         />
+
         <label htmlFor="location">Location: </label>
         <input
           type="text"
@@ -61,12 +64,14 @@ function HubForm({ onAddHub }) {
           value={formData.location}
           onChange={handleChange}
         />
+
         <label htmlFor="description">Description: </label>
         <textarea
           id="description"
           value={formData.description}
           onChange={handleChange}
         />
+
         <label htmlFor="founder">Founder: </label>
         <input
           type="text"
@@ -74,6 +79,7 @@ function HubForm({ onAddHub }) {
           value={formData.founder}
           onChange={handleChange}
         />
+
         <button type="submit">Submit</button>
       </form>
     </div>
