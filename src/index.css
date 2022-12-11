@@ -132,16 +132,4 @@ main {
   flex-wrap: wrap;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-}
 
-form input,
-form textarea {
-  margin-bottom: 0.5rem;
-}
-
-form button[type="submit"] {
-  width: 150px;
-}

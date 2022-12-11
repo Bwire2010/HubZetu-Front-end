@@ -9,7 +9,7 @@ function HubItem({ hub }) {
   return (
  <NavLink to={`/hubs/${hub.id} `}>
 
-    <div class="hub-item card">
+    <div className="hub-item card">
       <img src={image} alt={name} />
       <div className="details">
           <h2>{name}</h2>

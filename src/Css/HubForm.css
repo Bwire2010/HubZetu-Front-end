@@ -1,0 +1,39 @@
+.hubform {
+  margin: left;
+  width: 50%;
+  padding: 1rem;
+  background-color:	lightblue;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form input,
+  form textarea {
+    margin-bottom: 0.5rem;
+  }
+  
+  form button[type="submit"] {
+    width: 150px;
+  }
+  
+label{
+    display: inline-block;
+		text-align: right;
+}
+
+input[type=text] {
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  height: 25px;
+}
+textarea {
+  width: 90%;
+  height: 150px;
+}

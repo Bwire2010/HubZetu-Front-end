@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 
-function Review({  onDeleteReview }) {
+function Review({ onDeleteReview }) {
   const [review, setReview] = useState([]);
-  
 
   useEffect(() => {
     fetch("/reviews")
@@ -10,12 +9,9 @@ function Review({  onDeleteReview }) {
       .then(setReview);
   }, []);
 
-
   const handleDeleteReview = (review) => {
     handleDelete(review.id, review.hub_id);
-  }
-
-  
+  };
 
   function handleDelete() {
     fetch(`/logout/${review.id}`, {
@@ -27,20 +23,15 @@ function Review({  onDeleteReview }) {
     });
   }
 
-
   return (
-
     <div className="spice-item card">
-       <h3>Reviews</h3>
+      <h3>Reviews</h3>
 
-       <container>
-      <div className="details"></div>
+      <container>
+        <div className="details"></div>
         <p> {review.comment}</p>
         <button onClick={handleDeleteReview}>Delete Review</button>
-    
-        
-        </container>
-      
+      </container>
     </div>
   );
 }

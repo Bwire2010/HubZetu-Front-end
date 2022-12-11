@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import "../Css/HubForm.css";
 
 const initialState = {
   name: "",
@@ -37,49 +37,57 @@ function HubForm({ onAddHub }) {
   }
 
   return (
-    <div className="card">
+    <div className="hubform">
       <h2>New Hub</h2>
+
       <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="name"> Name: </label>
+          <input
+            type="text"
+            id="name"
+            value={formData.name}
+            onChange={handleChange}
+          />
+        </div>
 
-        <label htmlFor="name">Name: </label>
-        <input
-          type="text"
-          id="name"
-          value={formData.name}
-          onChange={handleChange}
-        />
+        <div>
+          <label htmlFor="image">Image Url: </label>
+          <input
+            type="text"
+            id="image"
+            value={formData.image}
+            onChange={handleChange}
+          />
+        </div>
 
-        <label htmlFor="image">Image URL: </label>
-        <input
-          type="text"
-          id="image"
-          value={formData.image}
-          onChange={handleChange}
-        />
+        <div>
+          <label htmlFor="location"> Location: </label>
+          <input
+            type="text"
+            id="location"
+            value={formData.location}
+            onChange={handleChange}
+          />
+        </div>
 
-        <label htmlFor="location">Location: </label>
-        <input
-          type="text"
-          id="location"
-          value={formData.location}
-          onChange={handleChange}
-        />
-
-        <label htmlFor="description">Description: </label>
-        <textarea
-          id="description"
-          value={formData.description}
-          onChange={handleChange}
-        />
-
-        <label htmlFor="founder">Founder: </label>
-        <input
-          type="text"
-          id="founder"
-          value={formData.founder}
-          onChange={handleChange}
-        />
-
+        <div>
+          <label htmlFor="description"> Description: </label>
+          <textarea
+            id="description"
+            value={formData.description}
+            onChange={handleChange}
+          />
+        </div>
+        <div>
+          <label htmlFor="founder"> Founder: </label>
+          <input
+            type="text"
+            id="founder"
+            value={formData.founder}
+            onChange={handleChange}
+          />
+        </div>
         <button type="submit">Submit</button>
       </form>
     </div>
