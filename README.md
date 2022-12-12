@@ -14,3 +14,23 @@ How might we involve public participation in creating awareness,support and give
 # Site Preview
 ## Welcome page
 <img src="src/Assets/Welcome page.png" alt="Alt text" title="Optional title">
+
+## landing page
+<img src="src/Assets/Landing page.png" alt="Alt text" title="Optional title">
+
+## Hub Form
+
+<img src="src/Assets/Hub form.png" alt="Alt text" title="Optional title">
+
+## Review Form
+
+<img src="src/Assets/Review form.png" alt="Alt text" title="Optional title">
+
+## Technologies used
+
+- JSX
+- CSS
+- Styled Components
+- Bootstrap
+- React
+- Ruby
