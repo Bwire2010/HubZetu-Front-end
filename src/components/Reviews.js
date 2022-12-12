@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 
+
 function Review({ onDeleteReview }) {
   const [review, setReview] = useState([]);
 
@@ -27,11 +28,11 @@ function Review({ onDeleteReview }) {
     <div className="spice-item card">
       <h3>Reviews</h3>
 
-      <container>
+      <>
         <div className="details"></div>
         <p> {review.comment}</p>
         <button onClick={handleDeleteReview}>Delete Review</button>
-      </container>
+      </>
     </div>
   );
 }
